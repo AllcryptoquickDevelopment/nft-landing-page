@@ -8,11 +8,17 @@
   --font-primary: 'Roboto', monospace;
   --font-secondary: 'Roboto', monospace;
   --font-code: 'Roboto', monospace;
-  --bg-color: #0c0c0c;
-  --font-color: #ffffff;
-  --btn-bg-color: #fd0606;
-  --accent-color: hsl(0, 0%, 100%);
-  --header-shadow: #000 0px 0px 5px;
+  --bg-color: #595643;
+  --font-color: #F2E8B6;
+  --btn-bg-color: #f60824;
+  --accent-color: #F2B263;
+  --header-shadow: #ffffff;
+  --title-font-color: #ffffff;
+  --box-font-color: #000000;
+  --cd-font-color: #000000;
+  --cd-bg-color: #ffffff;
+  --cd-low-bg-color: #0D0D0D;
+  --cd-low-font-color: #ffffff;
 }
 
 * {
@@ -26,8 +32,8 @@ body {
   display: flex;
   flex-flow: column;
   height: 100vh;
-  color: var(--font-color);
-  font-family: var(--font-primary);
+  color: var(--title-font-color);
+  font-family: var(--font-secondary);
 }
 
 .container {
@@ -41,7 +47,7 @@ body {
 /* HEADER */
 
 header {
-  box-shadow: var(--header-shadow);
+  box-shadow: var(---title-font-color);
 }
 
 header .container {
@@ -62,7 +68,7 @@ header .container {
   display: inline-block;
   padding: 1rem 2rem;
   background: var(--btn-bg-color);
-  color: var(--accent-color);
+  color: var(--title-font-color);
   font-family: var(--font-secondary);
   font-style: italic;
   font-weight: bold;
@@ -73,7 +79,11 @@ header .container {
   cursor: pointer;
   position: relative;
   text-decoration: none;
-  outline: none;
+  outline:  var(--accent-color);
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
 }
 .btn:hover {
   box-shadow: none;
@@ -83,12 +93,20 @@ header .container {
   border-radius: 5rem;
   margin-left: 2rem;
   border-color: transparent;
+  -webkit-border-radius: 5rem;
+  -moz-border-radius: 5rem;
+  -ms-border-radius: 5rem;
+  -o-border-radius: 5rem;
 }
 
 .hero-btn {
   border-radius: 4px;
   font-size: 1.2rem;
   padding: 1.5rem 3rem;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
 }
 
 /* COUNTDOWN SECTION */
@@ -115,8 +133,8 @@ section {
   height: auto;
 }
 .countdown .clock-item .count-number {
-  background: var(--accent-color);
-  color: var(--font-color);
+  background: var(--cd-bg-color);
+  color: var(--cd-font-color);
   font-size: 2rem;
   font-weight: 700;
   font-family: var(--font-secondary);
@@ -126,18 +144,27 @@ section {
   text-align: center;
   line-height: 1;
   border-radius: 4px 4px 0 0;
+  -webkit-border-radius: 4px 4px 0 0;
+  -moz-border-radius: 4px 4px 0 0;
+  -ms-border-radius: 4px 4px 0 0;
+  -o-border-radius: 4px 4px 0 0;
 }
 .countdown .clock-item .count-text {
-  background: var(--btn-bg-color);
+  background: var(--cd-low-bg-color);
   font-family: var(--font-secondary);
   font-size: 1.1rem;
-  color: var(--bg-color);
+  color: var(--cd-low-font-color);
+  ):;
   padding: 0.5rem 0.7rem;
   display: inline-block;
   width: 100%;
   text-align: center;
   line-height: 1;
   border-radius: 0 0 4px 4px;
+  -webkit-border-radius:;
+  -moz-border-radius:;
+  -ms-border-radius:;
+  -o-border-radius:;
 }
 
 .countdown h1 {
